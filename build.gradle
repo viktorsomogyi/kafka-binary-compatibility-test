@@ -33,7 +33,7 @@ jar {
 dependencies {
     compile "org.apache.kafka:kafka_2.12:$kafka_version"
     compile "org.apache.kafka:kafka-clients:$kafka_version"
-    //compile "org.apache.zookeeper:zookeeper:$zookeeper_version"
+    compile "org.slf4j:slf4j-log4j12:1.7.25"
     compile "log4j:log4j:1.2.17"
 }
 
