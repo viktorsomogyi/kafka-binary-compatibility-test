@@ -1,6 +1,7 @@
 buildscript {
     ext.kafka_version = '2.0.0'
     ext.scala_version = '2.12'
+    ext.zookeeper_version = '3.4.13'
 
     repositories {
         mavenCentral()
@@ -32,6 +33,7 @@ jar {
 dependencies {
     compile "org.apache.kafka:kafka_2.12:$kafka_version"
     compile "org.apache.kafka:kafka-clients:$kafka_version"
+    //compile "org.apache.zookeeper:zookeeper:$zookeeper_version"
     compile "log4j:log4j:1.2.17"
 }
 

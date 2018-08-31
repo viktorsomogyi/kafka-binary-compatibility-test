@@ -34,7 +34,6 @@ public class TestProducer {
         properties.put(ProducerConfig.ACKS_CONFIG, "all");
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-        properties.put(ProducerConfig.CONNECTIONS_MAX_IDLE_MS_CONFIG, 10000);
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
         Callback callback = new DummyCallback();
