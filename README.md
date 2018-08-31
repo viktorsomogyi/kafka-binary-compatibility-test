@@ -1,0 +1,1 @@
+# kafka-binary-compatibility-test

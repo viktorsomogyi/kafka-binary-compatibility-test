@@ -1,0 +1,41 @@
+buildscript {
+    ext.kafka_version = '2.0.0'
+    ext.scala_version = '2.12'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'hu.svv'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'hu.svv.TestProducer'
+        )
+    }
+}
+
+
+dependencies {
+    compile "org.apache.kafka:kafka_2.12:$kafka_version"
+    compile "org.apache.kafka:kafka-clients:$kafka_version"
+    compile "log4j:log4j:1.2.17"
+}
+
+task getDeps(type: Copy) {
+    from sourceSets.main.runtimeClasspath
+    into 'build/libs/'
+}
